@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SwiftClinics — Modern Healthcare</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo.ico">
+
+</head>
+<body>
+
+
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="logo.ico" alt="SwiftClinics logo" class="logo-img">
+    <span class="logo-swift">Swift</span><span class="logo-clinics">Clinics</span>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#doctors">Doctors</a>
+    <a href="#appointment">Appointments</a>
+    <a href="#contact">Contact</a>
+    <a href="#appointment" class="nav-cta">Book Now</a>
+    <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode" aria-label="Toggle theme">🌙</button>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <button class="theme-toggle" id="themeToggleMobile" title="Toggle dark/light mode" aria-label="Toggle theme" style="display:none;">🌙</button>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#doctors" onclick="closeMenu()">Doctors</a>
+  <a href="#appointment" onclick="closeMenu()">Appointments</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#appointment" onclick="closeMenu()" style="color:var(--teal-light);font-weight:600;">📅 Book Appointment</a>
+</div>
+
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span> Trusted Healthcare Since 2010</div>
+      <h1>Your Health, Our <em>Priority</em> — Always</h1>
+      <p>SwiftClinics brings world-class specialists, seamless online booking, and compassionate care to your fingertips. Appointments in minutes, not days.</p>
+      <div class="hero-btns">
+        <a href="#appointment" class="btn-primary">📅 Book Appointment</a>
+        <a href="#doctors" class="btn-outline">Meet Our Doctors</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Doctors</div></div>
+        <div class="stat"><div class="stat-num">20k+</div><div class="stat-label">Patients</div></div>
+        <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Specialties</div></div>
+        <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Emergency</div></div>
+      </div>
+    </div>
+    <div class="hero-card-grid">
+      <div class="hero-card"><div class="icon">🩺</div><h4>General OPD</h4><p>Daily consultations & checkups</p></div>
+      <div class="hero-card"><div class="icon">🫀</div><h4>Cardiology</h4><p>Heart diagnostics & care</p></div>
+      <div class="hero-card"><div class="icon">🧠</div><h4>Neurology</h4><p>Brain & nervous system</p></div>
+      <div class="hero-card"><div class="icon">🦷</div><h4>Dental</h4><p>Complete oral health care</p></div>
+      <div class="hero-card"><div class="icon">👶</div><h4>Pediatrics</h4><p>Child & infant specialists</p></div>
+      <div class="hero-card"><div class="icon">🦴</div><h4>Orthopaedics</h4><p>Bone, joint & spine</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="services">
+  <div class="section-inner">
+    <div class="section-tag">What We Offer</div>
+    <h2 class="section-title">Comprehensive Medical Services</h2>
+    <p class="section-sub">From routine checkups to specialised procedures — all under one roof with the best medical professionals.</p>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">🩺</div><h3>General Medicine</h3><p>Diagnosis and treatment of common illnesses, fever, infections and general health management.</p></div>
+      <div class="service-card"><div class="service-icon">🫀</div><h3>Cardiology</h3><p>ECG, echocardiography, stress tests and advanced cardiac care by senior cardiologists.</p></div>
+      <div class="service-card"><div class="service-icon">🧠</div><h3>Neurology</h3><p>Treatment of brain disorders, epilepsy, migraines, strokes and neurological assessments.</p></div>
+      <div class="service-card"><div class="service-icon">👶</div><h3>Paediatrics</h3><p>Specialised child healthcare, vaccinations, growth monitoring and adolescent medicine.</p></div>
+      <div class="service-card"><div class="service-icon">🦴</div><h3>Orthopaedics</h3><p>Bone fractures, joint replacement, spine surgery and sports injury rehabilitation.</p></div>
+      <div class="service-card"><div class="service-icon">🔬</div><h3>Diagnostics & Lab</h3><p>Advanced in-house laboratory tests with results delivered within hours of sample collection.</p></div>
+      <div class="service-card"><div class="service-icon">🦷</div><h3>Dental Care</h3><p>Routine cleaning to root canals, braces, implants and cosmetic dentistry services.</p></div>
+      <div class="service-card"><div class="service-icon">🚑</div><h3>24/7 Emergency</h3><p>Round-the-clock emergency services with trained paramedics and ICU on standby.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="doctors">
+  <div class="section-inner">
+    <div class="section-tag">Our Team</div>
+    <h2 class="section-title">Meet Our Specialist Doctors</h2>
+    <p class="section-sub">Our team of experienced, board-certified specialists are here to provide personalised care for every patient.</p>
+    <div class="doctors-grid">
+
+      <div class="doctor-card">
+        <div class="doctor-header">
+          <div class="doctor-avatar">PR</div>
+          <div class="doctor-title"><h3>Dr. Priya Rajan</h3><div class="spec">Chief Cardiologist</div></div>
+        </div>
+        <div class="doctor-body">
+          <div class="doctor-info-row"><div class="info-icon">🎓</div><div class="info-text"><strong>MBBS, MD, DM Cardiology</strong></div></div>
+          <div class="doctor-info-row"><div class="info-icon">⏳</div><div class="info-text">18 years experience</div></div>
+          <div class="doctor-info-row"><div class="info-icon">📅</div><div class="info-text"><strong>Mon, Wed, Fri</strong> — 9:00 AM – 1:00 PM</div></div>
+          <div class="doctor-info-row"><div class="info-icon">🗣️</div><div class="info-text">Hindi, English, Tamil</div></div>
+          <span class="availability-badge"><span class="dot-green"></span>Available Today</span>
+          <button class="book-btn" onclick="prefillDoctor('Dr. Priya Rajan', 'Cardiology')">Book Appointment</button>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-header">
+          <div class="doctor-avatar" style="background:#7C3AED">AM</div>
+          <div class="doctor-title"><h3>Dr. Arjun Mehta</h3><div class="spec">Senior Neurologist</div></div>
+        </div>
+        <div class="doctor-body">
+          <div class="doctor-info-row"><div class="info-icon">🎓</div><div class="info-text"><strong>MBBS, MD, DM Neurology</strong></div></div>
+          <div class="doctor-info-row"><div class="info-icon">⏳</div><div class="info-text">14 years experience</div></div>
+          <div class="doctor-info-row"><div class="info-icon">📅</div><div class="info-text"><strong>Tue, Thu, Sat</strong> — 10:00 AM – 2:00 PM</div></div>
+          <div class="doctor-info-row"><div class="info-icon">🗣️</div><div class="info-text">Hindi, English, Gujarati</div></div>
+          <span class="availability-badge"><span class="dot-green"></span>Available Today</span>
+          <button class="book-btn" onclick="prefillDoctor('Dr. Arjun Mehta', 'Neurology')">Book Appointment</button>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-header">
+          <div class="doctor-avatar" style="background:#0369A1">SV</div>
+          <div class="doctor-title"><h3>Dr. Sunita Verma</h3><div class="spec">Paediatric Specialist</div></div>
+        </div>
+        <div class="doctor-body">
+          <div class="doctor-info-row"><div class="info-icon">🎓</div><div class="info-text"><strong>MBBS, MD Paediatrics</strong></div></div>
+          <div class="doctor-info-row"><div class="info-icon">⏳</div><div class="info-text">11 years experience</div></div>
+          <div class="doctor-info-row"><div class="info-icon">📅</div><div class="info-text"><strong>Mon – Fri</strong> — 8:00 AM – 12:00 PM</div></div>
+          <div class="doctor-info-row"><div class="info-icon">🗣️</div><div class="info-text">Hindi, English, Punjabi</div></div>
+          <span class="availability-badge"><span class="dot-green"></span>Available Today</span>
+          <button class="book-btn" onclick="prefillDoctor('Dr. Sunita Verma', 'Paediatrics')">Book Appointment</button>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-header">
+          <div class="doctor-avatar" style="background:#B45309">RK</div>
+          <div class="doctor-title"><h3>Dr. Rahul Kumar</h3><div class="spec">Orthopaedic Surgeon</div></div>
+        </div>
+        <div class="doctor-body">
+          <div class="doctor-info-row"><div class="info-icon">🎓</div><div class="info-text"><strong>MBBS, MS Orthopaedics</strong></div></div>
+          <div class="doctor-info-row"><div class="info-icon">⏳</div><div class="info-text">16 years experience</div></div>
+          <div class="doctor-info-row"><div class="info-icon">📅</div><div class="info-text"><strong>Mon, Tue, Thu</strong> — 2:00 PM – 6:00 PM</div></div>
+          <div class="doctor-info-row"><div class="info-icon">🗣️</div><div class="info-text">Hindi, English</div></div>
+          <span class="availability-badge" style="background:#FEF3C7;color:#92400E"><span class="dot-green" style="background:#F59E0B"></span>Next: Thursday</span>
+          <button class="book-btn" onclick="prefillDoctor('Dr. Rahul Kumar', 'Orthopaedics')">Book Appointment</button>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-header">
+          <div class="doctor-avatar" style="background:#0891B2">NP</div>
+          <div class="doctor-title"><h3>Dr. Neha Pillai</h3><div class="spec">General Physician</div></div>
+        </div>
+        <div class="doctor-body">
+          <div class="doctor-info-row"><div class="info-icon">🎓</div><div class="info-text"><strong>MBBS, MD General Medicine</strong></div></div>
+          <div class="doctor-info-row"><div class="info-icon">⏳</div><div class="info-text">9 years experience</div></div>
+          <div class="doctor-info-row"><div class="info-icon">📅</div><div class="info-text"><strong>Mon – Sat</strong> — 9:00 AM – 5:00 PM</div></div>
+          <div class="doctor-info-row"><div class="info-icon">🗣️</div><div class="info-text">Hindi, English, Malayalam</div></div>
+          <span class="availability-badge"><span class="dot-green"></span>Available Today</span>
+          <button class="book-btn" onclick="prefillDoctor('Dr. Neha Pillai', 'General Medicine')">Book Appointment</button>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-header">
+          <div class="doctor-avatar" style="background:#9D174D">MS</div>
+          <div class="doctor-title"><h3>Dr. Manish Shah</h3><div class="spec">Dental Surgeon</div></div>
+        </div>
+        <div class="doctor-body">
+          <div class="doctor-info-row"><div class="info-icon">🎓</div><div class="info-text"><strong>BDS, MDS Oral Surgery</strong></div></div>
+          <div class="doctor-info-row"><div class="info-icon">⏳</div><div class="info-text">12 years experience</div></div>
+          <div class="doctor-info-row"><div class="info-icon">📅</div><div class="info-text"><strong>Tue, Wed, Fri, Sat</strong> — 11:00 AM – 4:00 PM</div></div>
+          <div class="doctor-info-row"><div class="info-icon">🗣️</div><div class="info-text">Hindi, English, Marathi</div></div>
+          <span class="availability-badge"><span class="dot-green"></span>Available Today</span>
+          <button class="book-btn" onclick="prefillDoctor('Dr. Manish Shah', 'Dental Care')">Book Appointment</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="appointment">
+  <div class="section-inner">
+    <div class="section-tag">Book Online</div>
+    <h2 class="section-title">Schedule Your Appointment</h2>
+    <p class="section-sub">Fill in your details below and our team will confirm your appointment within 2 hours.</p>
+    <div class="appt-wrapper">
+      <div class="appt-info">
+        <h3>Why book with SwiftClinics?</h3>
+        <p>We've simplified the appointment process so you can focus on what matters most — your health. No long queues, no phone tag.</p>
+        <ul class="info-list">
+          <li><span class="check">✓</span>Instant online confirmation via email/SMS</li>
+          <li><span class="check">✓</span>Choose your preferred doctor and time slot</li>
+          <li><span class="check">✓</span>Free rescheduling up to 24 hours before</li>
+          <li><span class="check">✓</span>Reminder notifications before your visit</li>
+          <li><span class="check">✓</span>Access to medical reports online</li>
+          <li><span class="check">✓</span>Cashless insurance processing available</li>
+        </ul>
+      </div>
+      <div class="appt-form-card">
+        <form id="apptForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" placeholder="Priya">
+              <div class="error-msg" id="fname-err">Please enter your first name.</div>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" placeholder="Sharma">
+              <div class="error-msg" id="lname-err">Please enter your last name.</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" placeholder="+91 98765 43210">
+              <div class="error-msg" id="phone-err">Please enter a valid 10-digit number.</div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="you@example.com">
+              <div class="error-msg" id="email-err">Please enter a valid email.</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="age">Age *</label>
+              <input type="number" id="age" placeholder="25" min="1" max="120">
+              <div class="error-msg" id="age-err">Please enter a valid age (1–120).</div>
+            </div>
+            <div class="form-group">
+              <label for="gender">Gender *</label>
+              <select id="gender">
+                <option value="">Select gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+                <option>Prefer not to say</option>
+              </select>
+              <div class="error-msg" id="gender-err">Please select a gender.</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dept">Department *</label>
+              <select id="dept">
+                <option value="">Select department</option>
+                <option>General Medicine</option>
+                <option>Cardiology</option>
+                <option>Neurology</option>
+                <option>Paediatrics</option>
+                <option>Orthopaedics</option>
+                <option>Dental Care</option>
+                <option>Diagnostics & Lab</option>
+                <option>Emergency</option>
+              </select>
+              <div class="error-msg" id="dept-err">Please select a department.</div>
+            </div>
+            <div class="form-group">
+              <label for="doctor">Preferred Doctor</label>
+              <select id="doctor">
+                <option value="">Any available doctor</option>
+                <option>Dr. Priya Rajan</option>
+                <option>Dr. Arjun Mehta</option>
+                <option>Dr. Sunita Verma</option>
+                <option>Dr. Rahul Kumar</option>
+                <option>Dr. Neha Pillai</option>
+                <option>Dr. Manish Shah</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Preferred Date *</label>
+              <input type="date" id="date">
+              <div class="error-msg" id="date-err">Please select a date (today or later).</div>
+            </div>
+            <div class="form-group">
+              <label for="time">Preferred Time *</label>
+              <select id="time">
+                <option value="">Select time slot</option>
+                <option>8:00 AM – 9:00 AM</option>
+                <option>9:00 AM – 10:00 AM</option>
+                <option>10:00 AM – 11:00 AM</option>
+                <option>11:00 AM – 12:00 PM</option>
+                <option>12:00 PM – 1:00 PM</option>
+                <option>2:00 PM – 3:00 PM</option>
+                <option>3:00 PM – 4:00 PM</option>
+                <option>4:00 PM – 5:00 PM</option>
+              </select>
+              <div class="error-msg" id="time-err">Please select a time slot.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="notes">Brief Symptoms / Reason for Visit</label>
+            <textarea id="notes" placeholder="e.g. Chest pain since 2 days, fever with cold, routine checkup..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">📅 Confirm Appointment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-tag">Get in Touch</div>
+    <h2 class="section-title">Contact & Visiting Hours</h2>
+    <p class="section-sub">We're here when you need us. Reach out via phone, email, or just walk in during visiting hours.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="c-icon">📍</div>
+        <h4>Address</h4>
+        <p>12, Medical Hub Complex,<br>Sector 18, Gurugram,<br>Haryana – 122015</p>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">📞</div>
+        <h4>Phone & Emergency</h4>
+        <p>
+          General: <a href="tel:+911244567890">+91 124 456 7890</a><br>
+          Emergency: <a href="tel:+911244567999">+91 124 456 7999</a><br>
+          WhatsApp: <a href="tel:+919876543210">+91 98765 43210</a>
+        </p>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">✉️</div>
+        <h4>Email Us</h4>
+        <p>
+          Appointments: <a href="mailto:book@swiftclinics.in">book@swiftclinics.in</a><br>
+          General: <a href="mailto:hello@swiftclinics.in">hello@swiftclinics.in</a><br>
+          Reports: <a href="mailto:reports@swiftclinics.in">reports@swiftclinics.in</a>
+        </p>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">🕐</div>
+        <h4>OPD Visiting Hours</h4>
+        <table class="hours-table">
+          <tr><td>Monday – Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>9:00 AM – 4:00 PM</td></tr>
+          <tr><td>Sunday</td><td>10:00 AM – 1:00 PM</td></tr>
+          <tr><td>Emergency</td><td>24 × 7 × 365</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="text-decoration:none">
+          <img src="logo.ico" alt="SwiftClinics logo" class="logo-img">
+          <span class="logo-swift">Swift</span><span class="logo-clinics">Clinics</span>
+        </a>
+        <p>Providing trusted, compassionate and affordable healthcare to families since 2010. Your health is our mission.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="#services">General Medicine</a>
+        <a href="#services">Cardiology</a>
+        <a href="#services">Neurology</a>
+        <a href="#services">Paediatrics</a>
+        <a href="#services">Orthopaedics</a>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <a href="#home">Home</a>
+        <a href="#doctors">Our Doctors</a>
+        <a href="#appointment">Book Appointment</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h5>Information</h5>
+        <a href="#">Patient Rights</a>
+        <a href="#">Insurance</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span>SwiftClinics</span>. All rights reserved. | Built with ♥ for better healthcare.</p>
+    </div>
+  </div>
+</footer>
+
+
+<div class="modal-overlay" id="successModal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-icon">🎉</div>
+    <h3>Appointment Booked!</h3>
+    <p id="modalMsg">Your appointment has been confirmed. A confirmation will be sent to your phone/email. Please arrive 10 minutes early.</p>
+    <button class="modal-close" onclick="closeModal()">Done</button>
+  </div>
+</div>
+
+
+<div class="toast" id="toast">✅ Doctor pre-selected in the form!</div>
+
+
+<button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()" title="Back to top">↑</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
